@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Mileage</title>
+    </head>
+    <style>
+        .box
+        {
+            margin-top: 15%;
+            margin-left: 30%;
+            margin-right:30%;
+            border: 4px doted black; 
+            background-color: blue;
+            text-align: center; 
+            width: 450px;
+            height:  400px;
+        }
+    </style>
+    <body>
+        <div class="box">
+        <h1>Mileage Calculator</h1>
+        <h3>Aashik.A</h3>
+        <h3>25012808</h3>
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            <label><i>Distance Travelled: </label><i/>
+            <input type="text" name="distance" value="{{d}}" required> Km
+            <br><br>
+            <br>
+            <label>fuel Consumed: </label>
+            <input type="text" name="fuel" value="{{f}}" required> L
+            <br>
+            <br>
+
+            <br>
+            <input type="submit" value="Calculate">
+            <br>
+            <br><br>
+            <label>Mileage: </label>
+            <input type="text" name="efficiency" value="{{efficiency}}"> Km/L
+        </form>
+        </div>
+    </body>
+</html>
+
